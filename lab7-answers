@@ -1,0 +1,159 @@
+==============================
+ΜΥΥ-505 – Εργαστήριο 7
+Κρυφές Μνήμες (Cache)
+
+Ονοματεπώνυμο:OIKONOMOU CHRISTOS
+ΑΜ:4454
+==============================
+
+
+==============================
+ΜΕΡΟΣ Α – ΠΙΝΑΚΑΣ 1
+Direct Mapped / Fully Associative
+==============================
+
+Padding 0
+1st access:
+  Direct Mapped     -> Miss, Block: 0, Tag: 0x4000
+  Fully Associative -> Miss, Block: 0, Tag: 0x4000
+
+2nd access:
+  Direct Mapped     -> Hit,  Block: 0, Tag: 0x4000
+  Fully Associative -> Hit,  Block: 0, Tag: 0x4000
+
+
+Padding 4
+1st access:
+  Direct Mapped     -> Miss, Block: 0, Tag: 0x4000
+  Fully Associative -> Miss, Block: 0, Tag: 0x4000
+
+2nd access:
+  Direct Mapped     -> Miss, Block: 1, Tag: 0x4000
+  Fully Associative -> Miss, Block: 1, Tag: 0x4000
+
+
+Padding 8
+1st access:
+  Direct Mapped     -> Miss, Block: 1, Tag: 0x4000
+  Fully Associative -> Miss, Block: 0, Tag: 0x4000
+
+2nd access:
+  Direct Mapped     -> Hit,  Block: 1, Tag: 0x4000
+  Fully Associative -> Hit,  Block: 0, Tag: 0x4000
+
+
+==============================
+ΜΕΡΟΣ Β – ΠΙΝΑΚΑΣ 2
+Direct Mapped, 8 lines, 2 words/line
+==============================
+
+Pattern (H/M): MHHH
+Hit rate (%): 75%
+
+
+==============================
+ΜΕΡΟΣ Β – ΠΙΝΑΚΑΣ 3
+Direct Mapped, 4 lines, 4 words/line
+==============================
+
+Pattern (H/M): MHHHHHHH
+Hit rate (%): 87.5%
+
+
+==============================
+ΜΕΡΟΣ Β – ΠΙΝΑΚΑΣ 4
+Είδη τοπικότητας
+(T = Temporal, S = Spatial)
+==============================
+
+Pattern (T/S/M): M S T S S S T S
+
+
+==============================
+ΜΕΡΟΣ Γ – ΠΙΝΑΚΑΣ 5
+repCount = 1
+==============================
+
+Memory accesses per outer loop: 16
+Final hit rate (%): 12.5%
+
+
+==============================
+ΜΕΡΟΣ Γ – ΠΙΝΑΚΑΣ 6
+repCount = 2
+==============================
+
+Final hit rate (%): 56.25%
+
+
+==============================
+ΜΕΡΟΣ Γ – ΠΙΝΑΚΑΣ 7
+Από 2η επανάληψη και μετά
+==============================
+
+Pattern (T/S/M): M T
+
+
+==============================
+ΜΕΡΟΣ Γ – ΠΙΝΑΚΑΣ 8
+Miss rate vs repCount
+==============================
+
+missRate = 1 / (2 * repCount)
+
+
+==============================
+ΜΕΡΟΣ Δ – ΠΙΝΑΚΑΣ 9
+Direct Mapped – 1η επανάληψη εξωτερικού βρόχου
+(Υ=Υποχρεωτική, Σ=Σύγκρουσης, Χ=Χωρητικότητας, Ε=Ευστοχία)
+==============================
+
+Memory accesses: 16
+Hit rate (%): 6.25%
+Full pattern:
+Υ Ε Υ Σ Υ Σ Υ Σ Υ Σ Υ Σ Υ Σ Υ Σ
+
+
+==============================
+ΜΕΡΟΣ Δ – ΠΙΝΑΚΑΣ 10
+Direct Mapped – 2η επανάληψη εξωτερικού βρόχου
+==============================
+
+Total hit rate (%): 6.25%
+Full pattern:
+Υ Σ Υ Σ Υ Σ Υ Σ Υ Σ Υ Σ Υ Σ Υ Σ
+
+
+==============================
+ΜΕΡΟΣ Δ – ΠΙΝΑΚΑΣ 11
+option = 0
+==============================
+
+Final hit rate (%): 0%
+
+
+==============================
+ΜΕΡΟΣ Δ – ΠΙΝΑΚΑΣ 12
+Fully Associative – 1η επανάληψη
+==============================
+
+Cache lines used: 8
+Hit rate (%): 50%
+Same pattern as Direct Mapped?: No
+
+
+==============================
+ΜΕΡΟΣ Δ – ΠΙΝΑΚΑΣ 13
+Fully Associative – 2η επανάληψη
+==============================
+
+Total hit rate (%): 75%
+Same pattern as Direct Mapped?: No
+
+
+==============================
+ΤΕΛΙΚΗ ΕΡΩΤΗΣΗ
+==============================
+
+Minimum associativity (ways) with same hit rate as Fully Associative:
+8
